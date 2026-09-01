@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--color-text);
+}

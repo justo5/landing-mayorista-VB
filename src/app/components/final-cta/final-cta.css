@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+.final-cta {
+  position: relative;
+  z-index: 30;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 60px 80px;
+  text-align: center;
+}
+
+.final-cta__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.final-cta__copy {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+}
+
+.final-cta__form {
+  display: block;
+}
+
+@media (max-width: 620px) {
+  .final-cta {
+    padding: 20px 24px 60px;
+  }
+
+  .final-cta__title {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,60 @@
+/* Global styles */
+:root {
+  --color-bg: #0e1c25;
+  --color-bg-deep: #0b171f;
+  --color-text: #eef2f1;
+  --color-text-soft: #dfe6e4;
+  --color-text-muted: #9fb0b3;
+  --color-accent: #2096d6;
+  --color-accent-hover: #48befe;
+  --color-on-accent: var(--color-bg-deep);
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Scroll fade-in reveal, driven by the appFadeIn directive */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.fade-in--visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    transition: none;
+  }
+}

@@ -1,0 +1,28 @@
+<section id="faq" class="faq">
+  <div class="faq__header" appFadeIn>
+    <div class="faq__eyebrow">
+      <span class="faq__eyebrow-line"></span>
+      <span class="faq__eyebrow-text">Preguntas frecuentes</span>
+    </div>
+    <h2 class="faq__title">Lo que nos preguntan los mayoristas antes de empezar</h2>
+  </div>
+
+  <div class="faq__list">
+    @for (item of items; track item.question; let i = $index) {
+      <div
+        class="faq__item"
+        [class.faq__item--open]="openIndex() === i"
+        appFadeIn
+        [appFadeInDelay]="i * 60"
+      >
+        <button type="button" class="faq__question" (click)="toggle(i)">
+          <span>{{ item.question }}</span>
+          <span class="faq__toggle">{{ openIndex() === i ? '−' : '+' }}</span>
+        </button>
+        @if (openIndex() === i) {
+          <p class="faq__answer">{{ item.answer }}</p>
+        }
+      </div>
+    }
+  </div>
+</section>

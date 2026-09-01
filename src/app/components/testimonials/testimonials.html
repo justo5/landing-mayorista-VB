@@ -1,0 +1,47 @@
+<section id="resultados" class="testimonials">
+  <div class="testimonials__header" appFadeIn>
+    <div class="testimonials__eyebrow">
+      <span class="testimonials__eyebrow-line"></span>
+      <span class="testimonials__eyebrow-text">Lo que dicen nuestros clientes</span>
+    </div>
+    <h2 class="testimonials__title">Reseñas reales de Google</h2>
+    <div class="testimonials__rating">
+      <span class="testimonials__rating-score">4.8</span>
+      <span class="testimonials__rating-stars">★★★★★</span>
+      <span class="testimonials__rating-count">118 opiniones en Google</span>
+    </div>
+  </div>
+
+  <div class="testimonials__grid">
+    @for (review of reviews; track review.name; let i = $index) {
+      <div class="testimonials__card" appFadeIn [appFadeInDelay]="(i % 3) * 90">
+        <div class="testimonials__card-head">
+          <span class="testimonials__avatar">{{ review.initials }}</span>
+          <div>
+            <span class="testimonials__name">{{ review.name }}</span>
+            <span class="testimonials__stars">★★★★★</span>
+          </div>
+        </div>
+        <p class="testimonials__quote">"{{ review.quote }}"</p>
+        <span class="testimonials__time">{{ review.timeAgo }}</span>
+      </div>
+    }
+  </div>
+
+  <div class="testimonials__instagram" appFadeIn>
+    <div class="testimonials__instagram-eyebrow">Nuestro Instagram es nuestro currículum</div>
+    <h3 class="testimonials__instagram-title">¿Querés ver más casos de éxito reales?</h3>
+    <p class="testimonials__instagram-copy">
+      Cada semana subimos resultados, métricas y testimonios de clientes reales. Sin filtros, sin edición. Solo
+      números.
+    </p>
+    <a
+      href="https://instagram.com/vamosbienmkt"
+      target="_blank"
+      rel="noopener"
+      class="testimonials__instagram-cta"
+      >Instagram <span class="testimonials__instagram-arrow">→</span></a
+    >
+    <span class="testimonials__instagram-footnote">+118 reseñas en Google · Casos nuevos cada semana</span>
+  </div>
+</section>

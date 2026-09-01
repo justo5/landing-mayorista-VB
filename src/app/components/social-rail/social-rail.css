@@ -1,0 +1,36 @@
+.social-rail {
+  position: fixed;
+  left: 34px;
+  top: 44%;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.social-rail__label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #cbd4d2;
+}
+
+.social-rail__divider {
+  width: 1px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.social-rail__link {
+  font-size: 15px;
+  color: #cbd4d2;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .social-rail {
+    display: none;
+  }
+}

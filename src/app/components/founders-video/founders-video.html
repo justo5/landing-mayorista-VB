@@ -1,0 +1,37 @@
+<section id="video-fundadores" class="founders-video">
+  <div class="founders-video__eyebrow" appFadeIn>
+    <span class="founders-video__eyebrow-line"></span>
+    <span class="founders-video__eyebrow-text">Conocé al equipo</span>
+  </div>
+  <h2 class="founders-video__title" appFadeIn [appFadeInDelay]="80">
+    Fundadores de Vamos Bien te explican cómo vender más
+  </h2>
+
+  <div class="founders-video__wrap" appFadeIn [appFadeInDelay]="160" (click)="togglePlay()">
+    <video
+      #videoRef
+      class="founders-video__video"
+      playsinline
+      preload="metadata"
+      poster="/resources/video-fundadores-poster.jpg"
+      (ended)="onVideoEnded()"
+    >
+      <source src="/resources/video-fundadores.mp4" type="video/mp4" />
+    </video>
+
+    <button
+      type="button"
+      class="founders-video__play-btn"
+      [class.founders-video__play-btn--playing]="isPlaying()"
+      [attr.aria-label]="isPlaying() ? 'Pausar video' : 'Reproducir video'"
+    >
+      @if (!isPlaying()) {
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M8 5v14l11-7z" /></svg>
+      } @else {
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+          <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+        </svg>
+      }
+    </button>
+  </div>
+</section>

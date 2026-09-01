@@ -1,0 +1,31 @@
+<section id="oferta" class="oferta">
+  <div class="oferta__copy" appFadeIn>
+    <div class="oferta__eyebrow">
+      <span class="oferta__eyebrow-line"></span>
+      <span class="oferta__eyebrow-text">La oferta</span>
+    </div>
+    <h2 class="oferta__title">Primer mes de honorarios <span class="oferta__title-accent">100% gratis</span></h2>
+    <p class="oferta__text">
+      Durante los primeros 30 días trabajamos normalmente en tu negocio mayorista, pero no abonás nuestros honorarios.
+      No es un mes sin trabajo: es un mes completo de implementación, estrategia y ejecución profesional.
+    </p>
+    <p class="oferta__text-strong">Tu primer pago se realiza recién al comenzar el segundo mes.</p>
+    <div class="oferta__note">
+      <strong>Nota:</strong> la inversión publicitaria se abona desde el primer día directamente a Meta y no está
+      incluida en la bonificación.
+    </div>
+    <a href="#sumate" class="oferta__cta">Quiero mi primer mes bonificado <span class="oferta__cta-arrow">→</span></a>
+  </div>
+
+  <div class="oferta__card" appFadeIn [appFadeInDelay]="120">
+    <span class="oferta__card-label">Incluido en esos 30 días</span>
+    <ul class="oferta__list">
+      @for (item of included; track item) {
+        <li class="oferta__list-item">
+          <span class="oferta__list-mark">✓</span>
+          {{ item }}
+        </li>
+      }
+    </ul>
+  </div>
+</section>

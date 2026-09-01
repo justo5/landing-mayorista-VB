@@ -1,0 +1,23 @@
+<div
+  class="fillout-embed"
+  data-fillout-id="oazWPzuWncus"
+  data-fillout-embed-type="standard"
+  data-fillout-inherit-parameters
+  data-fillout-dynamic-resize
+  data-name="emanuel.trpin@gmail.com"
+></div>
+
+@if (showThanks()) {
+  <div class="thanks-overlay" (click)="closeThanks()">
+    <div class="thanks-card" (click)="$event.stopPropagation()">
+      <button class="thanks-close" (click)="closeThanks()" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="thanks-icon">🎉</div>
+      <h3>¡Recibimos tu consulta!</h3>
+      <p>Un miembro del equipo de Vamos Bien va a revisar tu caso y te contactará por WhatsApp en menos de 24hs.</p>
+    </div>
+  </div>
+}

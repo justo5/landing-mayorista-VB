@@ -1,0 +1,27 @@
+<section
+  [id]="sectionId()"
+  class="feature-block"
+  [class.feature-block--image-left]="imageSide() === 'left'"
+  [style.padding-top]="paddingTop()"
+  [style.padding-bottom]="paddingBottom()"
+>
+  <div class="feature-block__text" appFadeIn>
+    <span class="feature-block__number">{{ number() }}</span>
+    <div class="feature-block__eyebrow">
+      <span class="feature-block__eyebrow-line"></span>
+      <span class="feature-block__eyebrow-text">{{ eyebrow() }}</span>
+    </div>
+    <h2 class="feature-block__title">{{ title() }}</h2>
+    <p class="feature-block__description">{{ description() }}</p>
+  </div>
+
+  <div
+    class="feature-block__image"
+    [style.height]="imageHeight()"
+    [appParallaxFloat]="0.06"
+    appFadeIn
+    [appFadeInDelay]="120"
+  >
+    <img [src]="imageSrc()" [alt]="imageAlt()" class="feature-block__image-photo" />
+  </div>
+</section>
