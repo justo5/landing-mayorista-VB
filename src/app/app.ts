@@ -10,6 +10,7 @@ import { FoundersVideo } from './components/founders-video/founders-video';
 import { Faq } from './components/faq/faq';
 import { FinalCta } from './components/final-cta/final-cta';
 import { Footer } from './components/footer/footer';
+import { FloatingContact } from './components/floating-contact/floating-contact';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ import { Footer } from './components/footer/footer';
     Faq,
     FinalCta,
     Footer,
+    FloatingContact,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

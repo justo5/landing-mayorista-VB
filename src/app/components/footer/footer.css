@@ -71,4 +71,8 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .footer {
+    padding-bottom: calc(70px + 60px + env(safe-area-inset-bottom));
+  }
 }
