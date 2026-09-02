@@ -23,7 +23,7 @@ export class Scroll {
     return Math.min(Math.max(this.scrollYSignal() / (vh * 0.9), 0), 1);
   });
 
-  readonly backdropBlurPx = computed(() => (this.backdropProgress() * 26).toFixed(1));
+  readonly backdropBlurPx = computed(() => (8 + this.backdropProgress() * 34).toFixed(1));
 
   readonly backdropSaturate = computed(() => (1 + this.backdropProgress() * 0.08).toFixed(3));
 
