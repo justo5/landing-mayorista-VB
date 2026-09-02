@@ -1,8 +1,8 @@
 services:
-  mntn-landing:
+  landing-mayorista-vb:
     build:
       context: .
-    container_name: mntn-landing
+    container_name: landing-mayorista-vb
     restart: unless-stopped
     networks:
       - npm_network
