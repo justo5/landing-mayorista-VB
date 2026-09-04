@@ -32,7 +32,8 @@
 
 @media (max-width: 620px) {
   .final-cta {
-    padding: 20px 24px 60px;
+    /* Extra bottom room so the floating "Contacto" bar doesn't sit on top of the form. */
+    padding: 20px 24px calc(60px + 60px + env(safe-area-inset-bottom));
   }
 
   .final-cta__title {

@@ -218,7 +218,8 @@
 
 @media (max-width: 620px) {
   .pricing {
-    padding: 60px 0 60px;
+    /* Extra bottom room so the floating "Contacto" bar doesn't sit on top of the footnote. */
+    padding: 60px 0 calc(60px + 60px + env(safe-area-inset-bottom));
   }
 
   .pricing__header {

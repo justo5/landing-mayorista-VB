@@ -35,12 +35,12 @@ export class Hero implements AfterViewInit, OnDestroy {
   private readonly casoVideos = viewChildren<ElementRef<HTMLVideoElement>>('casoVideo');
 
   protected readonly casos: CasoExito[] = [
-    { src: '/resources/instagram_C-v5t9iJkxt.mp4' },
-    { src: '/resources/instagram_DNRl47aBOkX.mp4' },
-    { src: '/resources/instagram_Cx6LkvqLo96.mp4' },
-    { src: '/resources/instagram_DW473LcDHP5.mp4' },
-    { src: '/resources/instagram_DXYD9V3DHag.mp4' },
-    { src: '/resources/instagram_DYDNHqZuo-c.mp4' },
+    { src: '/resources/instagram_C-G0K-wBFMF.mp4' },
+    { src: '/resources/instagram_DEp2QVpRyjK.mp4' },
+    { src: '/resources/instagram_DXuHHwWDfpE.mp4' },
+    { src: '/resources/instagram_DYArwjRui9f.mp4' },
+    { src: '/resources/instagram_DZLr6siJwyx.mp4' },
+    { src: '/resources/instagram_DZtVF6SseKu.mp4' },
   ];
 
   protected readonly activeCaso = signal(0);

@@ -6,16 +6,6 @@
   padding: 0 60px;
 }
 
-.content__block--first {
-  margin-top: -6vh;
-}
-
-@media (max-width: 900px) {
-  .content__block--first {
-    margin-top: 0;
-  }
-}
-
 @media (max-width: 620px) {
   .content {
     padding: 0 24px;

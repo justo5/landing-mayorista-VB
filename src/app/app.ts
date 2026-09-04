@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Navbar } from './components/navbar/navbar';
-import { SocialRail } from './components/social-rail/social-rail';
 import { Hero } from './components/hero/hero';
 import { Content } from './components/content/content';
 import { Oferta } from './components/oferta/oferta';
@@ -16,7 +15,6 @@ import { FloatingContact } from './components/floating-contact/floating-contact'
   selector: 'app-root',
   imports: [
     Navbar,
-    SocialRail,
     Hero,
     Content,
     Oferta,

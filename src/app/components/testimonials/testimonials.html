@@ -13,7 +13,7 @@
   </div>
 
   <div class="testimonials__grid">
-    @for (review of reviews; track review.name; let i = $index) {
+    @for (review of reviews; track i; let i = $index) {
       <div class="testimonials__card" appFadeIn [appFadeInDelay]="(i % 3) * 90">
         <div class="testimonials__card-head">
           <span class="testimonials__avatar">{{ review.initials }}</span>

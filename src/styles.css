@@ -22,6 +22,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keeps anchor-linked sections from landing under the fixed navbar. */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
