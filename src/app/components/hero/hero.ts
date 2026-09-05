@@ -35,11 +35,11 @@ export class Hero implements AfterViewInit, OnDestroy {
   private readonly casoVideos = viewChildren<ElementRef<HTMLVideoElement>>('casoVideo');
 
   protected readonly casos: CasoExito[] = [
+    { src: '/resources/instagram_DZLr6siJwyx.mp4' },
     { src: '/resources/instagram_C-G0K-wBFMF.mp4' },
     { src: '/resources/instagram_DEp2QVpRyjK.mp4' },
     { src: '/resources/instagram_DXuHHwWDfpE.mp4' },
     { src: '/resources/instagram_DYArwjRui9f.mp4' },
-    { src: '/resources/instagram_DZLr6siJwyx.mp4' },
     { src: '/resources/instagram_DZtVF6SseKu.mp4' },
   ];
 
@@ -123,7 +123,7 @@ export class Hero implements AfterViewInit, OnDestroy {
         video
           .play()
           .then(() => this.playingCaso.set(index))
-          .catch(() => {});
+          .catch(() => { });
       });
   }
 
@@ -138,7 +138,7 @@ export class Hero implements AfterViewInit, OnDestroy {
             if (index === this.playingCaso()) this.playingCaso.set(-1);
           } else if (index === this.activeCaso() && this.playingCaso() === -1) {
             video.muted = true;
-            video.play().catch(() => {});
+            video.play().catch(() => { });
           }
         });
       },
@@ -182,7 +182,7 @@ export class Hero implements AfterViewInit, OnDestroy {
     const video = this.casoVideos()[this.activeCaso()]?.nativeElement;
     if (!video) return;
     video.muted = true;
-    video.play().catch(() => {});
+    video.play().catch(() => { });
   }
 
   private pauseAllCasoVideos(): void {

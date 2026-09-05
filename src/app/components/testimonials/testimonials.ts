@@ -15,43 +15,43 @@ interface Review {
   styleUrl: './testimonials.css',
 })
 export class Testimonials {
-  // TODO: placeholders — reemplazar por reseñas reales de clientes mayoristas apenas estén disponibles.
+  // Reseñas reales de Google de Vamos Bien Marketing Digital. Se priorizaron las que no
+  // delatan el rubro del cliente (se descartó, por ejemplo, una de una clínica de estética).
   protected readonly reviews: Review[] = [
     {
-      name: 'Cliente mayorista',
-      initials: 'CM',
-      quote: 'Ejemplo de reseña: contanos cómo cambió tu volumen de pedidos desde que trabajás con nosotros.',
-      timeAgo: 'Hace 4 semanas',
-    },
-    {
-      name: 'Cliente mayorista',
-      initials: 'CM',
-      quote: 'Ejemplo de reseña: destacá la atención y el seguimiento del equipo.',
-      timeAgo: 'Hace 2 semanas',
-    },
-    {
-      name: 'Cliente mayorista',
-      initials: 'CM',
-      quote: 'Ejemplo de reseña: mencioná resultados concretos en captación de nuevos compradores.',
+      name: 'Sebastian Estevez',
+      initials: 'SE',
+      quote:
+        'Excelente experiencia y resultados reales. Se nota que saben lo que hacen: entienden el negocio, escuchan de verdad y no aplican recetas genéricas. El equipo es claro, transparente y muy profesional. No prometen magia, pero sí trabajo serio y resultados concretos.',
       timeAgo: 'Hace 2 meses',
     },
     {
-      name: 'Cliente mayorista',
-      initials: 'CM',
-      quote: 'Ejemplo de reseña: contanos hace cuánto trabajás con nosotros y qué cambió.',
-      timeAgo: 'Hace 7 meses',
+      name: 'Lucía Lasala',
+      initials: 'LL',
+      quote:
+        'Queremos agradecer a todo el equipo de Vamos Bien, especialmente a Bautista Di Cesare. Su compromiso y profesionalismo marcaron una gran diferencia en nuestra marca. Estamos muy contentos con los resultados. ¡Recomendamos 100%!',
+      timeAgo: 'Hace 2 meses',
     },
     {
-      name: 'Cliente mayorista',
-      initials: 'CM',
-      quote: 'Ejemplo de reseña: resaltá la proactividad y el compromiso del equipo.',
-      timeAgo: 'Hace 7 meses',
+      name: 'Gonzalo Quiroz',
+      initials: 'GQ',
+      quote:
+        'Quiero agradecer a los chicos de Vamos Bien, en este caso a Jerónimo. Excelente trabajo con mucha dedicación y atención en cada detalle. Los super recomiendo. Te llevan el emprendimiento a otro nivel.',
+      timeAgo: 'Hace 2 meses',
     },
     {
-      name: 'Cliente mayorista',
-      initials: 'CM',
-      quote: 'Ejemplo de reseña: contanos cómo ayudamos a potenciar tu marca y tus ventas.',
-      timeAgo: 'Hace 9 meses',
+      name: 'Alejandro Bessero',
+      initials: 'AB',
+      quote:
+        'Hace más de un año que trabajo con el equipo de Vamos Bien. Son excelentes y mi asesor Pedro Barbieri siempre dispuesto a resolver lo que sea. Me cambió la vida por completo. Los recomiendo al 100%.',
+      timeAgo: 'Hace 2 meses',
+    },
+    {
+      name: 'Tecnosol Uruguay',
+      initials: 'TU',
+      quote:
+        'Excelente opción para trabajar a distancia. Tuvimos una reunión por Zoom, les pasé mi idea y comenzamos a trabajar. Al poco tiempo comenzaron los resultados. Los recomiendo totalmente.',
+      timeAgo: 'Hace 2 meses',
     },
   ];
 }
