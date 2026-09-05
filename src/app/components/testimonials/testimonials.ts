@@ -53,5 +53,12 @@ export class Testimonials {
         'Excelente opción para trabajar a distancia. Tuvimos una reunión por Zoom, les pasé mi idea y comenzamos a trabajar. Al poco tiempo comenzaron los resultados. Los recomiendo totalmente.',
       timeAgo: 'Hace 2 meses',
     },
+    {
+      name: 'Genora',
+      initials: 'GN',
+      quote:
+        'Excelente gestión de pauta. Los chicos de mi equipo de trabajo son súper amables y siempre atentos a la necesidad de mi negocio. Recomiendo 🤗',
+      timeAgo: 'Hace 1 semana',
+    },
   ];
 }
