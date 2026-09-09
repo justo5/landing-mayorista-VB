@@ -14,25 +14,32 @@
   inset: -30px;
   transform: scale(1.06);
   will-change: filter;
-  background: #16303f url('/resources/fondo.jpg') center / cover no-repeat;
+  background: #f0e4c8 url('/resources/fondo.jpg') center / cover no-repeat;
 }
 
+/* A neutral (colorless) white wash instead of a tinted one — keeps the photo
+   airy without casting the cardboard hue onto it; copy over it is dark (see
+   .hero__title etc.) rather than the white text a dark scrim would call for. */
 .hero__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(14, 28, 37, 0.28), rgba(11, 23, 31, 0.55));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.65));
 }
 
 .hero__scrim-top {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(5, 12, 17, 0.75) 0%, rgba(5, 12, 17, 0.35) 22%, rgba(5, 12, 17, 0) 45%);
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.3) 22%, rgba(255, 255, 255, 0) 45%);
 }
 
 .hero {
   position: relative;
-  height: 116vh;
-  min-height: 100dvh;
+  /* JS (Hero.updateHeroHeight) sets the real height: exactly 100dvh minus the
+     navbar on desktop, or enough to fit the stacked mobile copy below. This is
+     just the pre-JS/no-JS fallback. */
+  height: calc(100dvh - 96px);
   overflow: hidden;
 }
 
@@ -52,7 +59,7 @@
   font-size: 26vw;
   line-height: 0.8;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.12);
+  color: rgba(22, 36, 44, 0.06);
 }
 
 .hero__copy-layer {
@@ -95,10 +102,11 @@
 .hero__title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(44px, 6vw, 88px);
-  line-height: 1.5;
+  font-size: clamp(38px, 5vw, 70px);
+  line-height: 1.45;
   letter-spacing: 0.5px;
-  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35);
+  color: var(--color-text);
+  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.6);
 }
 
 .hero__title-highlight {
@@ -211,7 +219,7 @@
 .hero__testimonials-card--active {
   transform: scale(1);
   opacity: 1;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px var(--color-accent);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2), 0 0 0 2px var(--color-accent);
   z-index: 2;
 }
 
@@ -274,7 +282,7 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(22, 36, 44, 0.06);
   border: 1px solid rgba(32, 150, 214, 0.3);
   color: var(--color-accent);
   display: flex;
@@ -316,6 +324,13 @@
 }
 
 @media (max-width: 900px) {
+  .hero {
+    /* Stacked copy can outgrow the viewport, so fall back to a taller minimum
+       here — JS still sizes it exactly to fit once it runs. */
+    height: 116vh;
+    min-height: 100dvh;
+  }
+
   .hero__row {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -332,10 +347,6 @@
 }
 
 @media (max-width: 620px) {
-  .hero__title {
-    line-height: 1.5;
-  }
-
   .hero__badge {
     padding: 10px 22px;
     font-size: 16px;

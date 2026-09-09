@@ -59,6 +59,13 @@ export class Hero implements AfterViewInit, OnDestroy {
       this.renderer.setStyle(this.backdrop().nativeElement, 'filter', `blur(${blur}px) saturate(${saturate})`);
       this.renderer.setStyle(this.scrim().nativeElement, 'background', this.scroll.scrimGradient());
     });
+
+    // Re-fits the hero once the navbar reports its real height (it registers
+    // slightly after the hero's own first measurement).
+    effect(() => {
+      this.scroll.navHeight();
+      this.updateHeroHeight();
+    });
   }
 
   ngAfterViewInit(): void {
@@ -160,13 +167,21 @@ export class Hero implements AfterViewInit, OnDestroy {
     this.copyLayerResizeObserver.observe(this.copyLayer().nativeElement);
   }
 
-  /** The copy layer is absolutely positioned, so it can't grow `.hero` on its own — size the section to fit it so stacked mobile content (incl. the testimonial videos) never gets clipped by `overflow: hidden`. */
+  /**
+   * The copy layer is absolutely positioned, so it can't grow `.hero` on its own —
+   * size the section to fit it so `overflow: hidden` never clips the copy (incl.
+   * stacked mobile content like the testimonial videos). On top of that content
+   * floor, desktop targets exactly 100dvh minus the navbar rather than a fixed
+   * multiple of the viewport, so it only overshoots when the copy genuinely needs
+   * more room than that (e.g. shorter laptop screens).
+   */
   private updateHeroHeight(): void {
     const hero = this.heroSection().nativeElement;
     const layer = this.copyLayer().nativeElement;
-    const topOffsetPx = window.innerHeight * 0.19;
+    const vh = window.innerHeight;
+    const topOffsetPx = vh * 0.19;
     const requiredHeight = topOffsetPx + layer.scrollHeight + 40;
-    const minHeight = window.innerHeight * 1.15;
+    const minHeight = window.innerWidth > 900 ? vh - this.scroll.navHeight() : vh * 1.15;
     this.renderer.setStyle(hero, 'height', `${Math.max(requiredHeight, minHeight)}px`);
   }
 

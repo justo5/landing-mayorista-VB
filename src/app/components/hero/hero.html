@@ -2,11 +2,15 @@
 <div class="hero__backdrop-layer">
   <div #backdrop class="hero__backdrop"></div>
   <div #scrim class="hero__scrim"></div>
-  <div class="hero__scrim-top"></div>
 </div>
 
 <!-- HERO -->
 <section #heroSection class="hero">
+  <!-- Top vignette for navbar contrast — scoped to the hero itself (not the fixed
+       backdrop layer) so it scrolls away with the hero instead of darkening the
+       light content underneath for the rest of the page. -->
+  <div class="hero__scrim-top"></div>
+
   <!-- ghost MNTN wordmark embedded in the backdrop -->
   <div class="hero__wordmark">
     <span>VB</span>
@@ -16,7 +20,7 @@
   <div #copyLayer class="hero__copy-layer">
     <div class="hero__row">
       <div class="hero__copy">
-        <h1 class="hero__title">Implementamos tu sistema de captación y ventas para tu <span class="hero__title-highlight">negocio mayorista</span></h1>
+        <h1 class="hero__title">Implementamos tu sistema de captación y ventas para tu negocio <span class="hero__title-highlight">mayorista</span></h1>
         <span class="hero__badge">Primer mes 100% bonificado</span>
         <p class="hero__subtitle">Dejá de depender de referidos, ferias comerciales y la suerte para conseguir tu próximo pedido.</p>
 

@@ -1,15 +1,46 @@
 /* Global styles */
 :root {
-  --color-bg: #0e1c25;
-  --color-bg-deep: #0b171f;
-  --color-text: #eef2f1;
-  --color-text-soft: #dfe6e4;
-  --color-text-muted: #9fb0b3;
+  --color-bg: #f8f4e9;
+  --color-bg-deep: #f0e4c8;
+  --color-text: #16242c;
+  --color-text-soft: #3b4d55;
+  --color-text-muted: #62747b;
   --color-accent: #2096d6;
   --color-accent-hover: #48befe;
-  --color-on-accent: var(--color-bg-deep);
+  --color-on-accent: #0b171f;
+  /* Neutral tints for subtle card fills/borders, flipped by .section-dark so they
+     read correctly against either a light or a dark section background. */
+  --surface-tint: rgba(0, 0, 0, 0.03);
+  --surface-tint-strong: rgba(0, 0, 0, 0.09);
   --font-display: 'Playfair Display', serif;
   --font-body: 'Work Sans', sans-serif;
+}
+
+/*
+ * Applied to alternating top-level sections to break up the page into bands.
+ * Rather than inverting to a dark/black theme, this just deepens the beige a
+ * couple of shades — text, accent and card tints stay the same as the rest of
+ * the site (inherited from :root) since the contrast still works fine on a
+ * beige this light. The section itself keeps its normal max-width/padding;
+ * only a full-bleed ::before behind it carries the fill out to the viewport
+ * edges.
+ */
+.section-dark {
+  --color-bg: #eae3d1;
+  --color-bg-deep: #dcc394;
+}
+
+.section-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background: var(--color-bg);
+  z-index: -1;
+  pointer-events: none;
 }
 
 * {
@@ -45,7 +76,7 @@ a:hover {
 
 ::selection {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-on-accent);
 }
 
 /* Scroll fade-in reveal, driven by the appFadeIn directive */

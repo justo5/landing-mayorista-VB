@@ -73,8 +73,8 @@
 
 .testimonials__card {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-tint);
+  border: 1px solid var(--surface-tint-strong);
   border-radius: 6px;
 }
 
@@ -127,7 +127,7 @@
 
 .testimonials__time {
   font-size: 12px;
-  color: #5f717b;
+  color: var(--color-text-muted);
 }
 
 .testimonials__instagram {

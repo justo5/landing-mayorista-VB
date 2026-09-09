@@ -51,7 +51,7 @@
   cursor: pointer;
   background: var(--color-bg-deep);
   border: 1px solid rgba(32, 150, 214, 0.25);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
 }
 
 .founders-video__video {

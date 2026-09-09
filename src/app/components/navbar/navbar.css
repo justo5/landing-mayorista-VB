@@ -14,9 +14,11 @@
 }
 
 .navbar--scrolled {
-  background: rgba(11, 23, 31, 0.92);
+  background: rgba(248, 244, 233, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 18px 52px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .navbar__logo {
@@ -28,6 +30,7 @@
   font-weight: 700;
   font-size: 26px;
   letter-spacing: 3px;
+  color: var(--color-text-soft);
 }
 
 .navbar__logo-icon {

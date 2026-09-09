@@ -69,7 +69,7 @@
   font-size: 13px;
   line-height: 1.7;
   color: var(--color-text-muted);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-tint);
   border-left: 2px solid var(--color-accent);
 }
 
