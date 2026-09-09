@@ -1,7 +1,7 @@
 /* Global styles */
 :root {
-  --color-bg: #f8f4e9;
-  --color-bg-deep: #f0e4c8;
+  --color-bg: #f7f6f2;
+  --color-bg-deep: #fcf9f3;
   --color-text: #16242c;
   --color-text-soft: #3b4d55;
   --color-text-muted: #62747b;
@@ -26,7 +26,7 @@
  * edges.
  */
 .section-dark {
-  --color-bg: #eae3d1;
+  --color-bg: #fff5dd;
   --color-bg-deep: #dcc394;
 }
 
