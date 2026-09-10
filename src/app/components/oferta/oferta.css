@@ -46,6 +46,14 @@
   color: var(--color-accent);
 }
 
+.oferta__title-note {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--color-text-muted);
+  margin-bottom: 22px;
+}
+
 .oferta__text {
   font-size: 15px;
   line-height: 1.85;

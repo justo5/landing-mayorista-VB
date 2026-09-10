@@ -9,16 +9,16 @@
   padding: 15px 26px;
   font-size: 15px;
   font-weight: 600;
-  color: var(--color-on-accent);
-  background: var(--color-accent);
+  color: #fff;
+  background: #e30613;
   border-radius: 999px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .floating-contact:hover {
-  color: var(--color-on-accent);
-  background: var(--color-accent-hover);
+  color: #fff;
+  background: #c00510;
   transform: translateY(-2px);
 }
 
