@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Navbar } from './components/navbar/navbar';
 import { Hero } from './components/hero/hero';
 import { Content } from './components/content/content';
+import { FitCheck } from './components/fit-check/fit-check';
 import { Oferta } from './components/oferta/oferta';
 import { Pricing } from './components/pricing/pricing';
 import { Testimonials } from './components/testimonials/testimonials';
@@ -17,6 +18,7 @@ import { FloatingContact } from './components/floating-contact/floating-contact'
     Navbar,
     Hero,
     Content,
+    FitCheck,
     Oferta,
     Pricing,
     Testimonials,

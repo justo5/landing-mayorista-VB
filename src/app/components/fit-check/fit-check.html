@@ -1,0 +1,38 @@
+<section id="es-para-vos" class="fit-check section-dark">
+  <div class="fit-check__eyebrow" appFadeIn>
+    <span class="fit-check__eyebrow-line"></span>
+    <span class="fit-check__eyebrow-text">¿Es para vos?</span>
+  </div>
+
+  <h2 class="fit-check__title" appFadeIn [appFadeInDelay]="60">Trabajamos solo con negocios mayoristas</h2>
+
+  <div class="fit-check__grid">
+    <div class="fit-check__card fit-check__card--yes" appFadeIn [appFadeInDelay]="120">
+      <span class="fit-check__card-label">Esto es para vos si…</span>
+      <ul class="fit-check__list">
+        @for (item of fitFor; track item) {
+          <li class="fit-check__list-item">
+            <span class="fit-check__list-mark fit-check__list-mark--yes">✓</span>
+            {{ item }}
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="fit-check__card fit-check__card--no" appFadeIn [appFadeInDelay]="180">
+      <span class="fit-check__card-label">No es para vos si…</span>
+      <ul class="fit-check__list">
+        @for (item of notFitFor; track item) {
+          <li class="fit-check__list-item">
+            <span class="fit-check__list-mark fit-check__list-mark--no">✕</span>
+            {{ item }}
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <p class="fit-check__punchline" appFadeIn [appFadeInDelay]="220">
+    No buscamos likes. Buscamos comercios que te pidan lista de precios.
+  </p>
+</section>
